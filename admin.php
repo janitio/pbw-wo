@@ -62,7 +62,7 @@ if(!isset($_SESSION['user'])){
             <a  href="#"><i class="fa fa-newspaper-o fa-3x"></i> Paket Gedung </a>
           </li> 
           <li>
-            <a  href="#"><i class="fa fa-newspaper-o fa-3x"></i> Partner </a>
+            <a  href="partner.php"><i class="fa fa-newspaper-o fa-3x"></i> Partner </a>
           </li> 
         </ul>
       </div>
