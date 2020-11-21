@@ -52,13 +52,13 @@ if (!isset($_SESSION['user'])) {
             <a class="active-menu" href="admin.php?halaman=home.php"><i class="fa fa-dashboard fa-3x"></i> Dashboard</a>
           </li>
           <li>
-            <a href="admin.php?halaman=paket-prewed"><i class="fa fa-newspaper-o fa-3x"></i> Paket Pre-Wedding </a>
+            <a href="admin.php?halaman=paket_prewed"><i class="fa fa-newspaper-o fa-3x"></i> Paket Pre-Wedding </a>
           </li>
           <li>
             <a href="#"><i class="fa fa-newspaper-o fa-3x"></i> Paket Catering </a>
           </li>
           <li>
-            <a href="admin.php?halaman=paket-gaun"><i class="fa fa-newspaper-o fa-3x"></i> Paket Gaun </a>
+            <a href="admin.php?halaman=paket_gaun"><i class="fa fa-newspaper-o fa-3x"></i> Paket Gaun </a>
           </li>
           <li>
             <a href="#"><i class="fa fa-newspaper-o fa-3x"></i> Paket Gedung </a>
@@ -76,10 +76,16 @@ if (!isset($_SESSION['user'])) {
           <div class="col-md-12">
             <?php
             if (isset($_GET['halaman'])) {
-              if ($_GET['halaman'] == "paket-prewed") {
-                include 'paket-prewed.php';
-              } elseif ($_GET['halaman'] == "paket-gaun") {
-                include 'paket-gaun.php';
+              if ($_GET['halaman'] == "paket_prewed") {
+                include 'paket_prewed.php';
+              } elseif ($_GET['halaman'] == "paket_gaun") {
+                include 'paket_gaun.php';
+              } elseif ($_GET['halaman'] == "hapus_paket_prewed") {
+                include 'hapus_paket_prewed.php';
+              } elseif ($_GET['halaman'] == "ubah_paket_prewed") {
+                include 'ubah_paket_prewed.php';
+              } elseif ($_GET['halaman'] == "tambah_paket_prewed") {
+                include 'tambah_paket_prewed.php';
               } else {
                 include 'home.php';
               }
