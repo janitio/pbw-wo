@@ -1,0 +1,18 @@
+-akun admin (bisa lihat di phpmyadmin)
+username	:admin1
+password	:123
+
+-buat database dulu di phpmyadmin. lalu import 
+file sql(di folder db) ke dalam database tersebut (pastikan
+nama database yang dibuat sama seperti nama file sql).
+
+-Bila ada kesalahan di field tabel, silahkan diubah.
+
+-upload ke repo clone(repo kalian), kalo semua 
+konten kelar semua. dan langsung merge.
+
+-untuk foto pada konten, pake foto bebas dulu. klo
+web sudah jadi baru diisi yang benarnya.
+
+-untuk data yang isi pada konten, isi ngasal dulu. klo
+web sudah jadi baru diisi yang benarnya.
