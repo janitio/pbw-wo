@@ -86,6 +86,12 @@ if (!isset($_SESSION['user'])) {
                 include 'ubah_paket_prewed.php';
               } elseif ($_GET['halaman'] == "tambah_paket_prewed") {
                 include 'tambah_paket_prewed.php';
+              } elseif ($_GET['halaman'] == "hapus_paket_gaun") {
+                include 'hapus_paket_gaun.php';
+              } elseif ($_GET['halaman'] == "ubah_paket_gaun") {
+                include 'ubah_paket_gaun.php';
+              } elseif ($_GET['halaman'] == "tambah_paket_gaun") {
+                include 'tambah_paket_gaun.php';
               } else {
                 include 'home.php';
               }
