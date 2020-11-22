@@ -41,7 +41,7 @@ if(isset($_POST['join'])){
 		if(!empty(trim($telp_part))&& !empty(trim($alamat_part))){
 			if(!empty(trim($paket_part))&& !empty(trim($foto_part))){
 				if(tambah_partner($nama_part,$email_part,$telp_part,$alamat_part,$paket_part,$foto_part)){
-					echo "<script>alert('Selamat. Anda sudah ikut dengan kami, terima kasih sudah ikut dengan kami, mohon kerjasamanya.');</script>";
+					echo "<script>alert('Terima kasih sudah ikut dengan kami, mohon kerjasamanya.');</script>";
 				}else{
 					echo'ada masalah saat mengirim pesan';                
 				}
@@ -56,11 +56,10 @@ if(isset($_POST['join'])){
 			<h2>Ikut Dengan Kami</h2>
 
 		</div>
-		<div class="col-sm-5 col-md-4 pull-right">
+		<div class="col-sm-2 col-md-4 pull-right p-3 mb-2 bg-success">
 			<div class="row">
-
 				<form method="post" role='form' enctype="multipart/form-data">
-					<h3 class="text-center">Lengkapi Data</h3>
+					<h2 class="text-center">Lengkapi Data Anda</h2>
 					<div class="form-group">
 						<label class="control-label col-sm-6" >Nama :</label>
 						<input type="text" name="nama_part"placeholder="Nama"class="form-control" required>
@@ -74,7 +73,7 @@ if(isset($_POST['join'])){
 						<input type="text" name="email_part"placeholder="Email"class="form-control" required>
 					</div>
 					<div class="form-group">
-						<label class="control-label col-sm-6" >Alamat :</label>
+						<label class="control-label col-sm-6" >Paket :</label>
 						<select class="form-control" name="paket_part"required>
 							<option>Pilih Paket yang ingin disediakan</option>
 							<option value="Pre-Wedding">Pre-Wedding</option>
@@ -85,13 +84,13 @@ if(isset($_POST['join'])){
 					</div>
 					<div class="form-group">
 						<label class="control-label col-sm-6" >Alamat :</label>
-						<input type="text" placeholder="Alamat" name="alamat_part"class="form-control" required>
+						<textarea type="text" placeholder="Alamat" name="alamat_part"class="form-control" required></textarea>
 					</div>
 					<div class="form-group">
 						<label class="control-label col-sm-6" >Upload Gambar :</label>
 						<input type="file" name="foto_part">
 					</div><br>
-					<input type="submit" name="join" value="Submit" class="btn btn-success" style="width:100%;">
+					<input type="submit" name="join" value="Join" class="btn btn-success" style="width:100%;">
 					<br>
 					<?php if($error !=''){?>
 						<div id="error">
