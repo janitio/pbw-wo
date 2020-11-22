@@ -9,20 +9,21 @@ if (!isset($_SESSION['user'])) {
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Website Wedding Organizer</title>
-	<!-- BOOTSTRAP STYLES-->
-	<link href="admin/assets/css/bootstrap.css" rel="stylesheet" />
-	<!-- FONTAWESOME STYLES-->
-	<link href="admin/assets/css/font-awesome.css" rel="stylesheet" />
-	<!-- MORRIS CHART STYLES-->
-	<link href="admin/assets/js/morris/morris-0.4.3.min.css" rel="stylesheet" />
-	<!-- CUSTOM STYLES-->
-	<link href="admin/assets/css/custom.css" rel="stylesheet" />
-	<!-- GOOGLE FONTS-->
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Website Wedding Organizer</title>
+  <!-- BOOTSTRAP STYLES-->
+  <link href="admin/assets/css/bootstrap.css" rel="stylesheet" />
+  <!-- FONTAWESOME STYLES-->
+  <link href="admin/assets/css/font-awesome.css" rel="stylesheet" />
+  <!-- MORRIS CHART STYLES-->
+  <link href="admin/assets/js/morris/morris-0.4.3.min.css" rel="stylesheet" />
+  <!-- CUSTOM STYLES-->
+  <link href="admin/assets/css/custom.css" rel="stylesheet" />
+  <!-- GOOGLE FONTS-->
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
 </head>
+
 <body>
   <div id="wrapper">
     <nav class="navbar navbar-default navbar-cls-top " role="navigation" style="margin-bottom: 0">
@@ -54,13 +55,13 @@ if (!isset($_SESSION['user'])) {
             <a href="admin.php?halaman=paket_prewed"><i class="fa fa-newspaper-o fa-3x"></i> Paket Pre-Wedding </a>
           </li>
           <li>
-            <a href="#"><i class="fa fa-newspaper-o fa-3x"></i> Paket Catering </a>
+            <a href="admin.php?halaman=p_catering"><i class="fa fa-newspaper-o fa-3x"></i> Paket Catering </a>
           </li>
           <li>
             <a href="admin.php?halaman=paket_gaun"><i class="fa fa-newspaper-o fa-3x"></i> Paket Gaun </a>
           </li>
           <li>
-            <a href="#"><i class="fa fa-newspaper-o fa-3x"></i> Paket Gedung </a>
+            <a href="admin.php?halaman=p_gedung"><i class="fa fa-newspaper-o fa-3x"></i> Paket Gedung </a>
           </li>
           <li>
             <a href="#"><i class="fa fa-newspaper-o fa-3x"></i> Partner </a>
@@ -91,6 +92,25 @@ if (!isset($_SESSION['user'])) {
                 include 'ubah_paket_gaun.php';
               } elseif ($_GET['halaman'] == "tambah_paket_gaun") {
                 include 'tambah_paket_gaun.php';
+
+              } elseif ($_GET['halaman'] == "p_gedung") {
+                include 'p_gedung.php';
+              } elseif ($_GET['halaman'] == "p_gedung_ubah") {
+                include 'p_gedung_ubah.php';
+              } elseif ($_GET['halaman'] == "p_gedung_tambah") {
+                include 'p_gedung_tambah.php';
+              } elseif ($_GET['halaman'] == "p_gedung_hps") {
+                include 'p_gedung_hps.php';
+
+              } elseif ($_GET['halaman'] == "p_catering") {
+                include 'p_catering.php';
+              } elseif ($_GET['halaman'] == "p_catering_ubah") {
+                include 'p_catering_ubah.php';
+              } elseif ($_GET['halaman'] == "p_catering_tambah") {
+                include 'p_catering_tambah.php';
+              } elseif ($_GET['halaman'] == "p_catering_hps") {
+                include 'p_catering_hps.php';
+
               } else {
                 include 'home.php';
               }
