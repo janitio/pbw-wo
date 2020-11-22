@@ -1,139 +1,68 @@
 <?php
-require_once"core/init.php";
-require_once"view/header.php";
+require_once "core/init.php";
+require_once "view/header.php";
 ?>
-<!-- header section --> 
+<style>
+	img {
+		width: 500px;
+		height: 300px;
+		object-fit: cover;
+	}
+</style>
+<!-- header section -->
 <!-- intro section -->
 <section id="intro" class="section intro">
-  <div class="container">
-    <div class="col-md-8 col-md-offset-2 text-center">
-      <h6>GAUN</h6>
-      <p> Foto - foto Pre Wedding Yang Bisa Menjadi Inspirasi Anda</p>    </div>
-  </div>
+	<div class="container">
+		<div class="col-md-8 col-md-offset-2 text-center">
+			<br>
+			<h6>PRE-WEDDING</h6>
+		</div>
+	</div>
 </section>
-<!-- intro section --> 
+<!-- intro section -->
 <!-- services section -->
-<!-- services section --> 
-<!-- work section -->
-<section id="works" class="works section no-padding">
-  <div class="container-fluid">
-    <div class="row no-gutter">
-      <div class="col-lg-3 col-md-6 col-sm-6 work"> <a href="images/foto (22).jpg" class="work-box"> <img src="images/foto (22).jpg" alt="">
-        <div class="overlay">
-          <div class="overlay-caption">
-            <h5>Kebun Teh</h5>
-            <p>Pre Wedding Kebun Teh</p>
-          </div>
-        </div>
-        <!-- overlay --> 
-        </a> </div>
-      <div class="col-lg-3 col-md-6 col-sm-6 work"> <a href="images/bromo.jpg" class="work-box"> <img src="images/bromo.jpg" alt="">
-        <div class="overlay">
-          <div class="overlay-caption">
-            <h5>Gunung Bromo</h5>
-            <p>Pre Wedding Bromo</p>
-          </div>
-        </div>
-        <!-- overlay --> 
-        </a> </div>
-      <div class="col-lg-3 col-md-6 col-sm-6 work"> <a href="images/foto (5).jpg" class="work-box"> <img src="images/foto (5).jpg" alt="">
-        <div class="overlay">
-          <div class="overlay-caption">
-            <h5>Kebun Bunga Matahari</h5>
-            <p>Pre Wedding Kebun Bunga Matahari</p>
-          </div>
-        </div>
-        <!-- overlay --> 
-        </a> </div>
-      <div class="col-lg-3 col-md-6 col-sm-6 work"> <a href="images/foto/alam/b2.jpg" class="work-box"> <img src="images/foto/alam/.jpg" alt="">
-        <div class="overlay">
-          <div class="overlay-caption">
-            <h5>Wisata Alam</h5>
-            <p>Puncak Becici</p>
-          </div>
-        </div>
-        <!-- overlay --> 
-        </a> </div>
-      <div class="col-lg-3 col-md-6 col-sm-6 work"> <a href="images/foto (8).jpg" class="work-box"> <img src="images/foto/alam/d1.jpg" alt="">
-        <div class="overlay">
-          <div class="overlay-caption">
-            <h5>Wisata Alam</h5>
-            <p>Embung Nglanggeran</p>
-          </div>
-        </div>
-        <!-- overlay --> 
-        </a> </div>
-      <div class="col-lg-3 col-md-6 col-sm-6 work"> <a href="images/foto/sejarah/a.jpg" class="work-box"> <img src="images/foto/sejarah/a.jpg" alt="">
-        <div class="overlay">
-          <div class="overlay-caption">
-            <h5>Wisata Sejarah</h5>
-            <p>Candi Borobudur</p>
-          </div>
-        </div>
-        <!-- overlay --> 
-        </a> </div>
-      <div class="col-lg-3 col-md-6 col-sm-6 work"> <a href="images/foto/sejarah/b.jpg" class="work-box"> <img src="images/foto/sejarah/b.jpg" alt="">
-        <div class="overlay">
-          <div class="overlay-caption">
-            <h5>Wisata Sejarah</h5>
-            <p>Benteng Vredeburg</p>
-          </div>
-        </div>
-        <!-- overlay --> 
-        </a> </div>
-      <div class="col-lg-3 col-md-6 col-sm-6 work"> <a href="images/foto/sejarah/c.jpg" class="work-box"> <img src="images/foto/sejarah/c.jpg" alt="">
-        <div class="overlay">
-          <div class="overlay-caption">
-            <h5>Wisata Sejarah</h5>
-            <p>Monumen Serangan Umum 1 Maret</p>
-          </div>
-        </div>
-        <!-- overlay --> 
-        </a> </div>
-    </div>
-  </div>
+<section id="services" class="services service-section">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6">
+				<section id="testimonials" class="section testimonials no-padding">
+					<div class="container-fluid">
+						<div class="row no-gutter">
+							<div class="flexslider">
+								<ul>
+									<?php $ambil = mysqli_query($link, "SELECT * FROM gaun"); ?>
+									<?php while ($pergaun = mysqli_fetch_assoc($ambil)) { ?>
+										<li>
+											<img src="images/<?= $pergaun['foto_gaun'] ?>">
+										</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+			<div class="col-md-6">
+				<h2>Nama Model : <?= $pergaun['model_gaun']; ?></h2>
+				<h3>Nama Pemilik Gaun: <?= $pergaun['pemilik_gaun']; ?></h3>
+			</div>
+		</div>
+		<section id="services" class="services service-section">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 col-sm-6 services text-center"> <span class="icon icon-envelope" style="color:#F60"></span>
+						<div class="services-content">
+							<p>Rp. <?= number_format($pergaun['harga_gaun']); ?></p>
+						</div>
+					</div>
+					<div class="col-md-6 col-sm-6 services text-center"> <span class="icon icon-phone" style="color:#F60"></span>
+						<div class="services-content">
+							<p><?= $pergaun['telp_gaun']; ?></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+<?php } ?>
 </section>
-<section id="works" class="works section no-padding">
-  <div class="container-fluid">
-    <div class="row no-gutter">
-      <div class="col-lg-3 col-md-6 col-sm-6 work"> <a href="images/foto/alam/c2.jpg" class="work-box"> <img src="images/foto/alam/c2.jpg" alt="">
-        <div class="overlay">
-          <div class="overlay-caption">
-            <h5>Wisata Alam</h5>
-            <p>Bukit Panguk</p>
-          </div>
-        </div>
-        <!-- overlay --> 
-        </a> </div>
-      <div class="col-lg-3 col-md-6 col-sm-6 work"> <a href="images/foto/alam/e.jpg" class="work-box"> <img src="images/foto/alam/e.jpg" alt="">
-        <div class="overlay">
-          <div class="overlay-caption">
-            <h5>Wisata Alam</h5>
-            <p>Pantai Drini</p>
-          </div>
-        </div>
-        <!-- overlay --> 
-        </a> </div>
-      <div class="col-lg-3 col-md-6 col-sm-6 work"> <a href="images/foto/alam/a2.jpg" class="work-box"> <img src="images/foto/alam/a2.jpg" alt="">
-        <div class="overlay">
-          <div class="overlay-caption">
-            <h5>Wisata Alam</h5>
-            <p>Taman Tebing Breksi</p>
-          </div>
-        </div>       
-        <!-- overlay --> 
-        </a> </div>
-      <div class="col-lg-3 col-md-6 col-sm-6 work"> <a href="images/foto/alam/d2.jpg" class="work-box"> <img src="images/foto/alam/d2.jpg" alt="">
-        <div class="overlay">
-          <div class="overlay-caption">
-            <h5>Wisata Alam</h5>
-            <p>Embung Nglanggeran</p>
-          </div>
-        </div>
-        <!-- overlay --> 
-        </a> </div>
-    </div>
-  </div>
-</section>
-
-  <?php require_once "view/footer.php"?>
+<?php require_once "view/footer.php" ?>
