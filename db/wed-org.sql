@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 21, 2020 at 05:20 PM
+-- Generation Time: Nov 23, 2020 at 05:42 AM
 -- Server version: 10.4.6-MariaDB
 -- PHP Version: 7.3.8
 
@@ -58,6 +58,34 @@ CREATE TABLE `catering` (
   `foto_cat` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `catering`
+--
+
+INSERT INTO `catering` (`id_cat`, `nama_cat`, `menu_cat`, `porsi_cat`, `harga_cat`, `telp_cat`, `foto_cat`) VALUES
+(1, 'maju mundur enak', 'nasi, ayam bakar, pisang rebus, kerupuk, bayam', '50', 10000000, '0812933933', 'ae.jpg');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `galeri`
+--
+
+CREATE TABLE `galeri` (
+  `id_gal` int(3) NOT NULL,
+  `tema_gal` varchar(50) NOT NULL,
+  `keterangan_gal` text NOT NULL,
+  `foto_gal` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `galeri`
+--
+
+INSERT INTO `galeri` (`id_gal`, `tema_gal`, `keterangan_gal`, `foto_gal`) VALUES
+(3, 'adat sumatera barat', 'menyesuaikan dengan kultur adatnya', 'ae.jpg'),
+(5, 'adat jawa barat', 'menyesuaikan dengan kultur adatnya pada jawa barat', 'aa.jpg');
+
 -- --------------------------------------------------------
 
 --
@@ -72,6 +100,13 @@ CREATE TABLE `gaun` (
   `telp_gaun` varchar(12) NOT NULL,
   `foto_gaun` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `gaun`
+--
+
+INSERT INTO `gaun` (`id_gaun`, `model_gaun`, `pemilik_gaun`, `harga_gaun`, `telp_gaun`, `foto_gaun`) VALUES
+(1, 'jawa barat', 'ivan gunawan', 200000, '081111111111', 'ae.jpg');
 
 -- --------------------------------------------------------
 
@@ -89,6 +124,13 @@ CREATE TABLE `gedung` (
   `foto_ged` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `gedung`
+--
+
+INSERT INTO `gedung` (`id_ged`, `nama_ged`, `alamat_ged`, `harga_ged`, `telp_ged`, `kapasitas_ged`, `foto_ged`) VALUES
+(1, 'kominfo', 'jalan barat 2', 100000000, '0812312312', '1000', 'aa.jpg');
+
 -- --------------------------------------------------------
 
 --
@@ -104,6 +146,14 @@ CREATE TABLE `partner` (
   `email_part` varchar(50) NOT NULL,
   `foto_part` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `partner`
+--
+
+INSERT INTO `partner` (`id_part`, `nama_part`, `paket_part`, `alamat_part`, `telp_part`, `email_part`, `foto_part`) VALUES
+(5, 'woy corp.', 'Pre-Wedding', 'jalan duren 2', '081112222', 'woy@woy.co.id', 'ae.jpg'),
+(9, 'pit asik com.', 'Catering', 'jalan wangi 6', '0821111', 'pit@asik.co.id', 'aa.jpg');
 
 -- --------------------------------------------------------
 
@@ -144,6 +194,12 @@ ALTER TABLE `catering`
   ADD PRIMARY KEY (`id_cat`);
 
 --
+-- Indexes for table `galeri`
+--
+ALTER TABLE `galeri`
+  ADD PRIMARY KEY (`id_gal`);
+
+--
 -- Indexes for table `gaun`
 --
 ALTER TABLE `gaun`
@@ -181,25 +237,31 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `catering`
 --
 ALTER TABLE `catering`
-  MODIFY `id_cat` int(3) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_cat` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `galeri`
+--
+ALTER TABLE `galeri`
+  MODIFY `id_gal` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `gaun`
 --
 ALTER TABLE `gaun`
-  MODIFY `id_gaun` int(3) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_gaun` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `gedung`
 --
 ALTER TABLE `gedung`
-  MODIFY `id_ged` int(3) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_ged` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `partner`
 --
 ALTER TABLE `partner`
-  MODIFY `id_part` int(3) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_part` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `wedding`
