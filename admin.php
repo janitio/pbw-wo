@@ -40,7 +40,7 @@ if (!isset($_SESSION['user'])) {
       padding: 15px 50px 5px 50px;
       float: right;
       font-size: 16px;"> Terakhir Akses : <?php date_default_timezone_set('Asia/Jakarta');
-                                          echo date('d-m-Y H:i:s'); ?> &nbsp; <a href="logout.php" class="btn btn-danger square-btn-adjust">Keluar</a> </div>
+      echo date('d-m-Y H:i:s'); ?> &nbsp; <a href="logout.php" class="btn btn-danger square-btn-adjust">Keluar</a> </div>
     </nav>
     <!-- /. NAV TOP  -->
     <nav class="navbar-default navbar-side" role="navigation">
@@ -64,7 +64,10 @@ if (!isset($_SESSION['user'])) {
             <a href="admin.php?halaman=p_gedung"><i class="fa fa-newspaper-o fa-3x"></i> Paket Gedung </a>
           </li>
           <li>
-            <a href="#"><i class="fa fa-newspaper-o fa-3x"></i> Partner </a>
+            <a href="admin.php?halaman=galeri"><i class="fa fa-newspaper-o fa-3x"></i> Galeri </a>
+          </li>
+          <li>
+            <a href="admin.php?halaman=partner"><i class="fa fa-newspaper-o fa-3x"></i> Partner </a>
           </li>
         </ul>
       </div>
@@ -110,6 +113,24 @@ if (!isset($_SESSION['user'])) {
                 include 'p_catering_tambah.php';
               } elseif ($_GET['halaman'] == "p_catering_hps") {
                 include 'p_catering_hps.php';
+
+              } elseif ($_GET['halaman'] == "galeri") {
+                include 'galeri.php';
+              } elseif ($_GET['halaman'] == "galeri_ubah") {
+                include 'galeri_ubah.php';
+              } elseif ($_GET['halaman'] == "galeri_tambah") {
+                include 'galeri_tambah.php';
+              } elseif ($_GET['halaman'] == "galeri_hapus") {
+                include 'galeri_hapus.php';
+
+              } elseif ($_GET['halaman'] == "partner") {
+                include 'partner.php';
+              } elseif ($_GET['halaman'] == "partner_ubah") {
+                include 'partner_ubah.php';
+              } elseif ($_GET['halaman'] == "partner_tambah") {
+                include 'partner_tambah.php';
+              } elseif ($_GET['halaman'] == "partner_hapus") {
+                include 'partner_hapus.php';
 
               } else {
                 include 'home.php';
