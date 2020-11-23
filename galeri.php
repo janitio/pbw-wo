@@ -1,3 +1,8 @@
+<?php
+if(!isset($_SESSION['user'])){
+        header('Location:index.php');
+    }
+?>
 <h2>Galeri Pre-Wedding</h2>
 
 <table class="table table-bordered">

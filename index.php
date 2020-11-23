@@ -2,7 +2,6 @@
 require_once"core/init.php";
 require_once"view/header.php";
 
-
 $galeri=tampil_galeri();
 $partner=tampil_partner();
 ?>

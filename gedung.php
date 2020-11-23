@@ -11,34 +11,31 @@ require_once"view/header.php";
       <p> Foto - foto Pre Wedding Yang Bisa Menjadi Inspirasi Anda</p>    </div>
     </div>
   </section>
-  <!-- intro section --> 
-  <!-- services section -->
-  <!-- services section --> 
   <!-- work section -->
-  <section id="works" class="works section no-padding">
-    <div class="container-fluid">
-      <div class="row no-gutter">
-<?php 
-$ambil = mysqli_query($link, "SELECT * FROM gedung");
-while ($pergedung = mysqli_fetch_assoc($ambil)) { 
-?>
-        <div class="col-lg-3 col-md-6 col-sm-6 work" style="">
-          <a href="" class="work-box"> <img src="images/gedung/<?= $pergedung['foto_ged'] ?>" height="150px" width="200px"alt="">
+  <section id="daftar" class="daftar section no-padding">
+    <div class="container-fluid bg-info">
+      <div class="row"><?php 
+      $ambil = mysqli_query($link, "SELECT * FROM gedung");
+      while ($perged = mysqli_fetch_assoc($ambil)) { 
+        ?>
+        <div class="col-lg-3 col-md-6 col-sm-6 work"><a class="work-box"> 
+          <?="<img src='images/gedung/".$perged['foto_ged']."'style='width:300px; height:300px;'>"?>
           <div class="overlay">
             <div class="overlay-caption">
-              <h5><?= $pergedung['nama_ged']; ?></h5>
-              <p><?= $pergedung['alamat_ged']; ?></p>
-              <p>Harga Rp. <?= number_format($pergedung['harga_ged']); ?></p>
-              <p>Kapasitas <?= $pergedung['kapasitas_ged']; ?> orang</p>
+              <h5><?= $perged['nama_ged'];?></h5>
+              <p>Alamat : <?= $perged['alamat_ged'];?></p>
+              <p>No.Telepon : <?= $perged['telp_ged'];?></p>
+              <p>Kapasitas : <?= $perged['kapasitas_ged'];?> orang</p>
             </div>
           </div>
           <!-- overlay --> 
-        </a>
-      </div>
-      </div>
+        </a> </div>
+      <?php }?>
     </div>
-  </section>
+  </div>
+</section>
 
-  <?php 
-  }
-  require_once "view/footer.php"?>
+
+<?php 
+
+require_once "view/footer.php"?>

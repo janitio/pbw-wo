@@ -41,7 +41,7 @@ if(isset($_POST['join'])){
 		if(!empty(trim($telp_part))&& !empty(trim($alamat_part))){
 			if(!empty(trim($paket_part))&& !empty(trim($foto_part))){
 				if(tambah_partner($nama_part,$email_part,$telp_part,$alamat_part,$paket_part,$foto_part)){
-					echo "<script>alert('Terima kasih sudah ikut dengan kami, mohon kerjasamanya.');</script>";
+					echo "<script>alert('Terima kasih atas partisipasinya, akan kami hubungi nanti.');</script>";
 				}else{
 					echo'ada masalah saat mengirim pesan';                
 				}
