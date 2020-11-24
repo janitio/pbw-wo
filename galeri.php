@@ -1,10 +1,12 @@
 <?php
 if(!isset($_SESSION['user'])){
-        header('Location:index.php');
-    }
+    header('Location:index.php');
+}
 ?>
 <h2>Galeri Pre-Wedding</h2>
-
+<div class="text-right">
+    <a href="admin.php?halaman=galeri_tambah" class="btn btn-primary">Tambah Data</a>
+</div><br>
 <table class="table table-bordered">
     <thead>
         <!-- No, nama penyewa, harga, nomor telpon -->
@@ -34,5 +36,3 @@ if(!isset($_SESSION['user'])){
         <?php } ?>
     </tbody>
 </table>
-
-<a href="admin.php?halaman=galeri_tambah" class="btn btn-primary">Tambah Data</a>

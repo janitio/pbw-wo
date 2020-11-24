@@ -8,13 +8,14 @@ $partner=tampil_partner();
 
 
 <!-- banner text -->
-<div class="container">
-	<div class="col-md-10 col-md-offset-1">
-		<div class="banner-text text-center">
-			<!-- banner text -->
-		</div>
-	</div>
-</section>
+ <div class="container">
+      <div class="col-md-10 col-md-offset-1">
+        <div class="banner-text text-center">
+          <p><a class="navbar-brand"><img src="images/wedding4.png" class="img-responsive" style="width: 1400px; margin-top: -130px;"></a></p>
+          <!-- banner text -->
+        </div>
+      </div>
+  </section>
 
 <!-- intro  -->
 <section id="intro" class="section intro">
@@ -32,7 +33,7 @@ $partner=tampil_partner();
 	<div class="container">
 		<div class="col-md-8 col-md-offset-2 text-center">
 			<h6>GALERI</h6>
-			<p> Foto - foto Pre Wedding Yang Bisa Menjadi Inspirasi Anda</p>    </div>
+			<p> Foto - foto Pre Wedding Yang Bisa Menjadi Inspirasi Anda</p></div>
 		</div>
 	</section>
 	<!-- work section -->
@@ -59,7 +60,7 @@ $partner=tampil_partner();
 		<div class="container">
 			<div class="col-md-8 col-md-offset-2 text-center">
 				<h6>TENTANG KAMI</h6>
-				<p>Sebuah website yang menyajikan...</p>
+				<p>Website Wedding Organizer adalah Pilihan Terbaik untuk Kamu yang ingin mengadakan Pesta Pernikahan dengan berbagai Tema. Kami akan mengatur semua persiapan sampai dengan acara pernikahan mu, dengan berbagai macam pilihan Dekorasi Unik, Busana & Rias Pengantin, Pilihan Menu Buffe, makanan gubukan dan dokumentasi pernikahan sesuai dengan keinginan..</p>
 				<br>
 			</li>
 		</div>

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 23, 2020 at 05:42 AM
+-- Generation Time: Nov 24, 2020 at 06:30 PM
 -- Server version: 10.4.6-MariaDB
 -- PHP Version: 7.3.8
 
@@ -63,7 +63,10 @@ CREATE TABLE `catering` (
 --
 
 INSERT INTO `catering` (`id_cat`, `nama_cat`, `menu_cat`, `porsi_cat`, `harga_cat`, `telp_cat`, `foto_cat`) VALUES
-(1, 'maju mundur enak', 'nasi, ayam bakar, pisang rebus, kerupuk, bayam', '50', 10000000, '0812933933', 'ae.jpg');
+(2, 'Cinta Indah Permata ', 'Menu Berdasarkan Foto Yang Tertera', '100', 20000000, '081231381411', '1.jpg'),
+(3, 'Bu Jurnailah ', 'Menu Berdasarkan Permintaan ', '100', 15000000, '0823211231', '2.jpg'),
+(4, 'Sonata Catering', 'Menu Tradisional Indonesia', '100', 5000000, '08128024324', 'cat1.png'),
+(5, 'Mitra Katering', '1. Nasi Putih\r\na. Nasi Goreng\r\nb. Mie Goreng\r\nc. Bihun Goreng\r\n2. SOP ( PILIHAN )\r\na. Sop kimlo\r\nb. Sop ayam sosis\r\nc. Sop ayam jagung\r\nd. Sop daging\r\ne. Sop iga\r\n3. Ayam ( PILIHAN )\r\na. Ayam grg mentega\r\nb. Ayam pg bali\r\nc. Ayam rica2\r\nd. Ayam lapis keju\r\ne. Ayam cusnut\r\n4. Daging ( PILIHAN )\r\na. Daging teriaki\r\nb. Daging rolade\r\nc. Daging lada hitam\r\nd. Daging rica2\r\ne. Daging krengseng\r\nf. Daging steak\r\n5. Kakap Asam Manis / Udang Goreng Tepung\r\n6. Macaroni Scotell\r\n7. Sayuran ( PILIHAN )\r\na. Asinan jakarta\r\nb. Slada bangkok\r\nc. Capcay\r\n8. Kerupuk\r\n9. Buah\r\n10. Puding\r\n11. Snack Tampah\r\n12. Softdrink\r\n13. Air Mineral', '100', 4500000, '081233124312', '3.jpg');
 
 -- --------------------------------------------------------
 
@@ -83,8 +86,9 @@ CREATE TABLE `galeri` (
 --
 
 INSERT INTO `galeri` (`id_gal`, `tema_gal`, `keterangan_gal`, `foto_gal`) VALUES
-(3, 'adat sumatera barat', 'menyesuaikan dengan kultur adatnya', 'ae.jpg'),
-(5, 'adat jawa barat', 'menyesuaikan dengan kultur adatnya pada jawa barat', 'aa.jpg');
+(6, 'Gunung Bromo', 'Pernikahan Dengan Tema Gunung Bromo', 'bromo.jpg'),
+(7, 'Kebun Teh ', 'Foto Pre-Wedding dengan Tema Kebun Teh', 'foto (22).jpg'),
+(8, 'Kebun Bunga Matahari', 'Foto Pre-Wedding dengan Tema Kebun Bunga Matahari', 'foto (5).jpg');
 
 -- --------------------------------------------------------
 
@@ -106,7 +110,10 @@ CREATE TABLE `gaun` (
 --
 
 INSERT INTO `gaun` (`id_gaun`, `model_gaun`, `pemilik_gaun`, `harga_gaun`, `telp_gaun`, `foto_gaun`) VALUES
-(1, 'jawa barat', 'ivan gunawan', 200000, '081111111111', 'ae.jpg');
+(2, 'Armarilis Butique', 'Armarilis Butique', 5000000, '088324281283', '97493-jof6iut22ci1.JPG'),
+(3, 'Sunda Modern', 'Jumain Butique', 5000000, '08122112212', '30729-fkb4eqp11we0.jpg'),
+(4, 'Sunda Minang', 'John Franco', 7000000, '08122143123', '30283-vbr1uhg76ou6.jpg'),
+(5, 'Jawa Klasik', 'Karina Busana', 6500000, '081384949068', '67727-g30neq5ddx1a.jpg');
 
 -- --------------------------------------------------------
 
@@ -129,7 +136,10 @@ CREATE TABLE `gedung` (
 --
 
 INSERT INTO `gedung` (`id_ged`, `nama_ged`, `alamat_ged`, `harga_ged`, `telp_ged`, `kapasitas_ged`, `foto_ged`) VALUES
-(1, 'kominfo', 'jalan barat 2', 100000000, '0812312312', '1000', 'aa.jpg');
+(2, 'Bandung Convention Center', 'Jalan Soekarno Hatta Nomor 354, Lega, Bojongloa Kidul, Bandung.', 10000000, '081276324562', '1600', 'gedung1.png'),
+(3, 'Gedung Balai Sartika', ' Jalan Suryalaya Indah Nomor 1-2, Buah Batu, Cijagra, Lengkong, Bandung.', 20000000, '085657432356', '1500', 'dewi-sartika.jpg'),
+(4, 'Mepro Hall', ' Jalan Soekarno Hatta Nomor 789, Babakan Penghulu, Cinambo, Bandung.', 20000000, '089612145625', '2000', 'mepro-hall.jpg'),
+(5, 'Gedung Kologdam Bandung', 'Jalan Aceh Nomor 50, Merdeka, Sumur Bandung, Bandung.', 17000000, '08126431234', '1500', 'kologdam.jpg');
 
 -- --------------------------------------------------------
 
@@ -152,8 +162,7 @@ CREATE TABLE `partner` (
 --
 
 INSERT INTO `partner` (`id_part`, `nama_part`, `paket_part`, `alamat_part`, `telp_part`, `email_part`, `foto_part`) VALUES
-(5, 'woy corp.', 'Pre-Wedding', 'jalan duren 2', '081112222', 'woy@woy.co.id', 'ae.jpg'),
-(9, 'pit asik com.', 'Catering', 'jalan wangi 6', '0821111', 'pit@asik.co.id', 'aa.jpg');
+(10, 'ALMER WEDDING DESIGN', 'Pre-Wedding', 'Jl. Komodo 2 No 36 Perumnas 2 Tangerang', '085920684174', 'almerrisma@gmail.com', 'almer.jpg');
 
 -- --------------------------------------------------------
 
@@ -175,7 +184,10 @@ CREATE TABLE `wedding` (
 --
 
 INSERT INTO `wedding` (`id_wed`, `nama_wed`, `harga_wed`, `telp_wed`, `keterangan_wed`, `foto_wed`) VALUES
-(1, 'test-pre-wed', '10000', '2193874', 'test-pre-wed', 're.jpg');
+(4, 'Paket A', '2500000', '08823192312', '            – Foto cetak 30x40cm + Bingkai 1pcs\r\n– Foto cetak uk.4R + Bingkai 5pcs\r\n– Foto Outdoor Durasi Pemotretan 4jam unlimited photo\r\n– DVD Softcopy file foto        ', '1.jpg'),
+(5, 'Paket B', '3500000', '08823114123', '– cetak Album kolase prewedding uk. 10R (20x25cm), 22 halaman\r\n– Foto cetak 30x40cm + Bingkai 1pcs\r\n– Foto cetak uk.4R + Bingkai 5pcs\r\n– Foto Outdoor Durasi Pemotretan 4jam unlimited photo\r\n– Property foto disediakan (dipinjamkan)\r\n– DVD Softcopy file foto', '2.jpg'),
+(6, 'Paket C', '7500000', '08231231421', '– Foto cetak 30x40cm + Bingkai 2pcs\r\n– Foto cetak uk.4R + Bingkai 5pcs\r\n– Foto Outdoor Durasi Pemotretan 4jam unlimited photo\r\n– Make Up-Hairdo/Hijab Style\r\n– Property foto disediakan (dipinjamkan)\r\n– DVD Softcopy file foto\r\n– 1 DVD Video Slideshow Foto Prewedding', '3.jpg'),
+(7, 'Paket D', '8500000', '0823412312', '– 1 Foto Liputan wedding\r\n– 1 Foto Candid\r\n– 1 Video Liputan wedding\r\n– 1 slr video; cinematic conceptual wedding video\r\noutput:\r\n– cetak album kolase 20x30cm, 22 halaman : 2 pcs\r\n– fullcover album kolase (photo printed cover full)\r\n– ekslusif printed album box\r\n– cetak foto 40x60cm + bingkai : 1pcs\r\n– DVD softcopy file foto\r\n– DVD video liputan wedding, editing dvd : 1pcs\r\n– DVD Video Cinematic Wedding', '4.jpg');
 
 --
 -- Indexes for dumped tables
@@ -237,37 +249,37 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `catering`
 --
 ALTER TABLE `catering`
-  MODIFY `id_cat` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_cat` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `galeri`
 --
 ALTER TABLE `galeri`
-  MODIFY `id_gal` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_gal` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `gaun`
 --
 ALTER TABLE `gaun`
-  MODIFY `id_gaun` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_gaun` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `gedung`
 --
 ALTER TABLE `gedung`
-  MODIFY `id_ged` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_ged` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `partner`
 --
 ALTER TABLE `partner`
-  MODIFY `id_part` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id_part` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `wedding`
 --
 ALTER TABLE `wedding`
-  MODIFY `id_wed` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_wed` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

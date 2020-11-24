@@ -8,7 +8,7 @@
     </div>
     <div class="form-group">
         <label>Alamat Gedung</label>
-        <input type="text" class="form-control" name="alamat">
+        <textarea type="text" class="form-control" name="alamat" cols="20" rows="5"></textarea>
     </div>
     <div class="form-group">
         <label>Harga (Rp)</label>
@@ -29,7 +29,6 @@
 
     <div class="text-right">
         <button class="btn btn-success" name="tambah">Tambah</button>
-        <input type="button" name="kembali" value="Kembali" onClick="javascript:history.back()" class="btn btn-secondary">
     </div>
 
 </form>

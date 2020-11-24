@@ -8,7 +8,6 @@ require_once"view/header.php";
   <div class="container">
     <div class="col-md-8 col-md-offset-2 text-center">
       <h6>CATERING</h6>
-      <p> Foto - foto Pre Wedding Yang Bisa Menjadi Inspirasi Anda</p>    </div>
     </div>
   </section>
   <!-- work section -->
@@ -25,7 +24,7 @@ require_once"view/header.php";
               <h5><?= $percat['nama_cat'];?></h5>
               <p>Menu : <?= $percat['menu_cat'];?></p>
               <p>Porsi : <?= $percat['porsi_cat'];?> orang</p>
-              <p>Harga : <?= $percat['harga_cat'];?></p>
+              <p>Harga : Rp. <?= number_format($percat['harga_cat'], 2, ',', '.');?></p>
               <p>No.Telepon : <?= $percat['telp_cat'];?></p>
             </div>
           </div>

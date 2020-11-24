@@ -29,7 +29,6 @@
 
     <div class="text-right">
         <button class="btn btn-success" name="tambah">Tambah</button>
-        <input type="button" name="kembali" value="Kembali" onClick="javascript:history.back()" class="btn btn-secondary">
     </div>
 
 </form>

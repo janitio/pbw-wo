@@ -314,7 +314,7 @@ ul li {
 	min-height: 650px;
 }
 .banner {
-	background-image: url(../images/re.jpg);
+	background-image: url(../images/bg-wed.jpg);
 	background-position: center top;
 	background-repeat: no-repeat;
 	-moz-background-size: cover;
@@ -446,6 +446,7 @@ ul li {
 }
 .work-box:hover .overlay {
 	opacity: 1;
+	display: block !important;
 }
 .work-box:hover .overlay h5, .work-box:hover .overlay p {
 	opacity: 1;

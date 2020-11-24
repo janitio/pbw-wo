@@ -12,6 +12,7 @@ $(document).ready(function() {
 
 	// Fancybox
 	$('.work-box').fancybox();
+	$('.work-box').css('display', 'block');
 
 	// Flexslider
 	$('.flexslider').flexslider({

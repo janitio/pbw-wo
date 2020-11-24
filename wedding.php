@@ -45,16 +45,16 @@ require_once "view/header.php";
 						<h2><?= $perwedding['nama_wed']; ?></h2>
 						<p><?= $perwedding['keterangan_wed']; ?></p>
 					</div>
-					<div class="col-md-6 col-sm-6 services text-center"> <span class="icon icon-envelope" style="color:#F60"></span>
+					<div class="col-md-6 col-sm-6 services text-center"> 
+						<span class="fa fa-credit-card fa-3x" style="color:#F60"></span>
 						<div class="services-content">
 							<p>Rp. <?= number_format($perwedding['harga_wed']); ?></p>
-						</div>
-						<span class="icon icon-phone" style="color:#F60"></span>
+						</div><br>
+						<span class="fa fa-phone fa-3x" style="color:#F60"></span>
 						<div class="services-content">
 							<p><?= $perwedding['telp_wed']; ?></p>
 						</div>
-						<div class="col-md-6 col-sm-6 services text-center"> 
-						</div>
+						
 					</div>
 				</div>
 				

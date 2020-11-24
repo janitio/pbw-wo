@@ -7,7 +7,7 @@
     </div>
     <div class="form-group">
         <label>Keterangan</label>
-        <input type="text" class="form-control" name="keterangan_gal">
+        <textarea type="text" class="form-control" name="keterangan_gal" cols="30" rows="10"></textarea>
     </div>
     <div class="form-group">
         <label>Foto</label>

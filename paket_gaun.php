@@ -1,5 +1,7 @@
-<h2>Paket Gaun</h2>
-
+<h2>Daftar Paket Gaun</h2>
+<div class="text-right">
+    <a href="admin.php?halaman=tambah_paket_gaun" class="btn btn-primary">Tambah Data</a>
+</div><hr>
 <table class="table table-bordered">
     <thead>
         <!-- No, nama penyewa, harga, nomor telpon -->
@@ -34,4 +36,3 @@
     </tbody>
 </table>
 
-<a href="admin.php?halaman=tambah_paket_gaun" class="btn btn-primary">Tambah Data</a>

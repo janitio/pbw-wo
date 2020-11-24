@@ -21,7 +21,9 @@
         <label>Foto</label>
         <input type="file" class="form-control" name="foto">
     </div>
-    <button class="btn btn-primary" name="tambah">Tambah</button>
+    <div class="text-right">
+        <button class="btn btn-success" name="tambah">Tambah</button>
+    </div>
 </form>
 <?php
 if (isset($_POST['tambah'])) {
