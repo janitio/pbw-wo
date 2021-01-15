@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 24, 2020 at 06:30 PM
+-- Generation Time: Jan 15, 2021 at 04:33 PM
 -- Server version: 10.4.6-MariaDB
 -- PHP Version: 7.3.8
 
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `wed-org`
+-- Database: `wed_org`
 --
 
 -- --------------------------------------------------------
@@ -157,12 +157,30 @@ CREATE TABLE `partner` (
   `foto_part` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+-- --------------------------------------------------------
+
 --
--- Dumping data for table `partner`
+-- Table structure for table `partner_join`
 --
 
-INSERT INTO `partner` (`id_part`, `nama_part`, `paket_part`, `alamat_part`, `telp_part`, `email_part`, `foto_part`) VALUES
-(10, 'ALMER WEDDING DESIGN', 'Pre-Wedding', 'Jl. Komodo 2 No 36 Perumnas 2 Tangerang', '085920684174', 'almerrisma@gmail.com', 'almer.jpg');
+CREATE TABLE `partner_join` (
+  `id_partjoin` int(3) NOT NULL,
+  `nama_partjoin` varchar(50) NOT NULL,
+  `paket_partjoin` varchar(30) NOT NULL,
+  `alamat_partjoin` text NOT NULL,
+  `telp_partjoin` varchar(14) NOT NULL,
+  `email_partjoin` varchar(40) NOT NULL,
+  `foto_partjoin` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `partner_join`
+--
+
+INSERT INTO `partner_join` (`id_partjoin`, `nama_partjoin`, `paket_partjoin`, `alamat_partjoin`, `telp_partjoin`, `email_partjoin`, `foto_partjoin`) VALUES
+(10, 'ALMER WEDDING DESIGN', 'Pre-Wedding', 'Jl. Komodo 2 No 36 Perumnas 2 Tangerang', '085920684174', 'almerrisma@gmail.com', 'almer.jpg'),
+(12, 'My Meal Catering', 'Catering', 'Jl. Angsa 2 No 10 Elok, Tangerang', '081234567899', 'meal_catering@gmail.com', 'mymeal.jpg'),
+(16, 'JTB', 'Catering', 'Jl. Timor 17 No 1 Jakarta', '082384953111', 'jtb_catering@gmail.com', 'jtb.jpg');
 
 -- --------------------------------------------------------
 
@@ -230,6 +248,12 @@ ALTER TABLE `partner`
   ADD PRIMARY KEY (`id_part`);
 
 --
+-- Indexes for table `partner_join`
+--
+ALTER TABLE `partner_join`
+  ADD PRIMARY KEY (`id_partjoin`);
+
+--
 -- Indexes for table `wedding`
 --
 ALTER TABLE `wedding`
@@ -273,7 +297,13 @@ ALTER TABLE `gedung`
 -- AUTO_INCREMENT for table `partner`
 --
 ALTER TABLE `partner`
-  MODIFY `id_part` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id_part` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+
+--
+-- AUTO_INCREMENT for table `partner_join`
+--
+ALTER TABLE `partner_join`
+  MODIFY `id_partjoin` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `wedding`

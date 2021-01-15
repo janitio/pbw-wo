@@ -20,7 +20,7 @@ function cek_data_pass($nama, $pass)
 function red_login($nama)
 {
     $_SESSION['user'] = $nama;
-    header('Location:admin.php');
+    header('Location:admin.php?halaman=home.php');
 }
 function tampil_user($user)
 {

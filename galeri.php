@@ -7,27 +7,27 @@ if(!isset($_SESSION['user'])){
 <div class="text-right">
     <a href="admin.php?halaman=galeri_tambah" class="btn btn-primary">Tambah Data</a>
 </div><br>
-<table class="table table-bordered">
+<table class="table table-striped">
     <thead>
         <!-- No, nama penyewa, harga, nomor telpon -->
-        <th>No</th>
-        <th>Tema</th>
-        <th>Keterangan</th>
-        <th>Foto</th>
-        <th>Aksi</th>
+        <th width="5%" class="text-center">No</th>
+        <th width="30%" class="text-center">Tema</th>
+        <th width="30%" class="text-center">Keterangan</th>
+        <th width="20%" class="text-center">Foto</th>
+        <th width="20%" class="text-center">Aksi</th>
     </thead>
     <tbody>
         <?php $nomor = 1; ?>
         <?php $ambil = mysqli_query($link, "SELECT * FROM galeri"); ?>
         <?php while ($pecah = mysqli_fetch_assoc($ambil)) { ?>
             <tr>
-                <td><?= $nomor; ?></td>
-                <td><?= $pecah['tema_gal']; ?></td>
+                <td class="text-center"><?= $nomor; ?></td>
+                <td class="text-center"><?= $pecah['tema_gal']; ?></td>
                 <td><?= $pecah['keterangan_gal']; ?></td>
-                <td>
+                <td class="text-center">
                     <img src="images/galeri/<?= $pecah['foto_gal']; ?>" width="100px">
                 </td>
-                <td>
+                <td class="text-center">
                     <a href="admin.php?halaman=galeri_hapus&id=<?= $pecah['id_gal']; ?>" class="btn btn-danger">Hapus</a>
                     <a href="admin.php?halaman=galeri_ubah&id=<?= $pecah['id_gal']; ?>" class="btn btn-warning">Ubah</a>
                 </td>

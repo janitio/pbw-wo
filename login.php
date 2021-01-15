@@ -2,7 +2,7 @@
    require_once"core/init.php";
     $error='';
     //redirect jika user sudah login
-    if(isset($_SESSION['user'])) header('Location:admin.php');
+    if(isset($_SESSION['user'])) header('Location:admin.php?halaman=home.php');
     //validasi login
     if(isset($_POST['submit'])){
         $nama=$_POST['username'];

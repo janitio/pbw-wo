@@ -75,12 +75,12 @@ $partner=tampil_partner();
 			<div class="row ">
 				<?php  while($row=mysqli_fetch_assoc($partner)): ?>
 					<div class="col-md-4 col-sm-6 services text-center">
-						<div class="services-content"><?="<img src='images/partner/".$row['foto_part']."'style='width:200px; height:200px;'>"?>
-						<h5><?= $row['nama_part'];?></h5>
-						<p>Email	:	<?= $row['email_part'];?></p>
-						<p>No.Telepon	:	<?= $row['telp_part'];?></p>
-						<p>Alamat	:	<?= $row['alamat_part'];?></p>
-						<p>Jenis Paket	:	<?= $row['paket_part'];?></p>
+						<div class="services-content"><?="<img src='images/partner/".$row['foto_partjoin']."'style='width:200px; height:200px;'>"?>
+						<h5><?= $row['nama_partjoin'];?></h5>
+						<p>Email	:	<?= $row['email_partjoin'];?></p>
+						<p>No.Telepon	:	<?= $row['telp_partjoin'];?></p>
+						<p>Alamat	:	<?= $row['alamat_partjoin'];?></p>
+						<p>Jenis Paket	:	<?= $row['paket_partjoin'];?></p>
 					</div>
 				</div>
 			<?php endwhile;?>

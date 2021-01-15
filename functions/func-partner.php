@@ -14,7 +14,7 @@ function tambah_partner($nama_part,$email_part,$telp_part,$alamat_part,$paket_pa
 }	
 function tampil_partner(){
     global $link;
-    $query="SELECT * FROM partner";
+    $query="SELECT * FROM partner_join";
     return result($query);
     } 
 function run($query){
@@ -28,12 +28,24 @@ function result($query){
         return $result;
     }
 }
-function single_partner($kode_partner){
-        $query="SELECT * FROM partner WHERE id_part=$kode_partner";
-    return result($query);
-}
 function hapus_partner($id_partner){
     $query="DELETE FROM partner WHERE id_part='$id_partner'";
  return run($query);
 }
+function cek_partner($ambil2){
+    global $link;
+    $query="SELECT * FROM partner";
+    if($result=mysqli_query($link,$query)){
+        if(mysqli_num_rows($result)!=0)return true;
+            else return false;
+        }
+    }
+function cek_partnerjoin($ambil){
+    global $link;
+    $query="SELECT * FROM partner_join";
+    if($result=mysqli_query($link,$query)){
+        if(mysqli_num_rows($result)!=0)return true;
+            else return false;
+        }
+    }
 ?>

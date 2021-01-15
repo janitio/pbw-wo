@@ -127,8 +127,10 @@ if (!isset($_SESSION['user'])) {
                 include 'partner.php';
               } elseif ($_GET['halaman'] == "partner_ubah") {
                 include 'partner_ubah.php';
-              } elseif ($_GET['halaman'] == "partner_tambah") {
-                include 'partner_tambah.php';
+              } elseif ($_GET['halaman'] == "partner_terima") {
+                include 'partner_terima.php';
+              } elseif ($_GET['halaman'] == "partner_tolak") {
+                include 'partner_tolak.php';
               } elseif ($_GET['halaman'] == "partner_hapus") {
                 include 'partner_hapus.php';
 

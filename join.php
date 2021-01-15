@@ -24,13 +24,13 @@ if(isset($_POST['join'])){
 				move_uploaded_file($asal,$namafile);
                          //memindahkan file ke tempat tujuan
 			}else{
-				echo'harus jpeg';
+				$error="<div class='alert alert-danger'>harus jpeg</div>";
 			}
 		}else{
-			echo'ukurannya terlalu besar';
+			$error="<div class='alert alert-danger'>ukurannya terlalu besar</div>";
 		}
 	}else{
-		echo'ada error';
+		$error="<div class='alert alert-danger'>ada error</div>";
 	}
 	$nama_part=$_POST['nama_part'];
 	$email_part=$_POST['email_part'];
@@ -42,6 +42,7 @@ if(isset($_POST['join'])){
 			if(!empty(trim($paket_part))&& !empty(trim($foto_part))){
 				if(tambah_partner($nama_part,$email_part,$telp_part,$alamat_part,$paket_part,$foto_part)){
 					echo "<script>alert('Terima kasih atas partisipasinya, akan kami hubungi nanti.');</script>";
+					echo "<script>location='join.php'</script>";
 				}else{
 					echo'ada masalah saat mengirim pesan';                
 				}
@@ -52,10 +53,6 @@ if(isset($_POST['join'])){
 ?>
 <section id="join" class="section join">
 	<div class="container" style="margin:8% auto;">
-		<div class="col-sm-4 col-md-3">
-			<h2>Ikut Dengan Kami</h2>
-
-		</div>
 		<div class="col-sm-2 col-md-4 pull-right p-3 mb-2 bg-success">
 			<div class="row">
 				<form method="post" role='form' enctype="multipart/form-data">
