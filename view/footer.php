@@ -2,11 +2,8 @@
                         <footer class="footer">
                           <div class="footer-top section">
                             <div class="container" align="center">
-                              <div class="row">
-                                <a style="padding:20px" ; href="#"><i class="fa fa-facebook"></i></a>
-                                <a style="padding:20px" ; href="#"><i class="fa fa-twitter"></i></a>
-                                <a style="padding:20px" ; href="#"><i class="fa fa-linkedin"></i></a>
-                                <a style="padding:20px" ; href="#"><i class="fa fa-google-plus"></i></a>
+                              <div class="row">Hubungi kami Lewat
+                                <a style="padding:10px" ; href="https://wa.widget.web.id/42c462"><i class="fa fa-whatsapp"></i></a>
                                 <br>
                                 <br>
                                 &copy; <?=date('Y');?> by <strong>Wedding Organizer</strong>. All Rights Reserved

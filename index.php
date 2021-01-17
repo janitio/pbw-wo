@@ -105,8 +105,8 @@ $partner=tampil_partner();
 		</div>
 		<div class="col-md-4 col-sm-6 services text-center"> <span class="icon icon-phone" style="color:#F60"></span>
 			<div class="services-content">
-				<h5>PHONE NUMBER</h5>
-				<p>(021)04081997</p>
+				<h5>TELEPON</h5>
+				<p>+62 859-2068-4174</p>
 			</div>
 		</div>
 		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.436552647258!2d106.60347711431012!3d-6.206004162519114!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69fe9563602feb%3A0xb96198680d35c8c4!2sJl.%20Komodo%20II%2C%20Kec.%20Cibodas%2C%20Kota%20Tangerang%2C%20Banten%2015138!5e0!3m2!1sid!2sid!4v1606064388443!5m2!1sid!2sid" width="100%" height="200" frameborder="0" style="border:0" allowfullscreen></iframe>

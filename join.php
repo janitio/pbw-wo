@@ -42,9 +42,9 @@ if(isset($_POST['join'])){
 			if(!empty(trim($paket_part))&& !empty(trim($foto_part))){
 				if(tambah_partner($nama_part,$email_part,$telp_part,$alamat_part,$paket_part,$foto_part)){
 					echo "<script>alert('Terima kasih atas partisipasinya, akan kami hubungi nanti.');</script>";
-					echo "<script>location='join.php'</script>";
+					echo "<script>location='index.php'</script>";
 				}else{
-					echo'ada masalah saat mengirim pesan';                
+					$error="<div class='alert alert-danger'>ada masalah saat mengirim pesan</div>";
 				}
 			}else $error="<div class='alert alert-danger'>Tidak Boleh Kosong</div>";
 		}else $error="<div class='alert alert-danger'>Tidak Boleh Kosong</div>";

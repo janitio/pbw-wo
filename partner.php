@@ -20,7 +20,7 @@ $ambil2 = mysqli_query($link, "SELECT * FROM partner");
 			<th class="text-center" width="30%">Aksi</th>
 		</thead>
 	<?php }else{?>
-		<tbody><tr class="bg-light text-center"><td>Tidak Ada Permintaan Partner</td></tr></tbody>
+		<tbody><tr class="bg-light text-center"><td><b>Tidak Ada Permintaan Partner</td></tr></tbody>
 	<?php }?>
 	<tbody>
 		<?php $nomor = 1; ?>
@@ -62,7 +62,7 @@ $ambil2 = mysqli_query($link, "SELECT * FROM partner");
 			<th class="text-center" width="30%">Aksi</th>
 		</thead>
 	<?php }else{?>
-		<tbody><tr class="bg-light text-center"><td>Tidak Ada Permintaan Partner</td></tr></tbody>
+		<tbody><tr class="bg-light text-center"><td><b>Tidak Ada Permintaan Partner</td></tr></tbody>
 		
 	<?php }?>
 	<tbody>
